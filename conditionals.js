@@ -2,7 +2,10 @@ let englishButton = document.querySelector(".english-button");
 let ssButton = document.querySelector(".ss-button");
 let mathButton = document.querySelector(".math-button");
 let scienceButton = document.querySelector(".science-button");
-
+let englishMessage = document.querySelector(".english-message");
+let ssMessage = document.querySelector(".ss-message");
+let mathMessage = document.querySelector(".math-message");
+let scienceMessage = document.querySelector(".science-message");
 
 
 // For each of the test questions:
@@ -22,10 +25,13 @@ englishButton.addEventListener("click", function() {
     //  - The answer should be "Mon".
     //  - If the user enters the correct answer, use .innerHTML to display the word "Correct!" in the ".english-message" div. 
     //  - If incorrect, display "Wrong! Try again."
-    
-
-
-
+    if (englishInput === "mon" || englishInput === "Mon") {
+        englishMessage.innerHTML = 'Correct!! move on';
+        englishMessage.style.color = 'green';
+    } else {
+        englishMessage.innerHTML = 'Wrong, Wrong Wrong Wrong. try again';
+        englishMessage.style.color = 'red';
+    }
 });
 
 
@@ -41,7 +47,13 @@ mathButton.addEventListener("click", function() {
     //  - The answer should be 30.
     //  - If the user enters the correct answer, use .innerHTML to display the word "Yessss!" in the ".math-message" div. 
     //  - If incorrect, display "Wrong! Try again."
-    
+    if (mathInput == 30) {
+        mathMessage.innerHTML = 'Correct!! move on';
+        mathMessage.style.color = 'green';
+    }else {
+        mathMessage.innerHTML = 'Wrong, Wrong Wrong Wrong. try again';
+        mathMessage.style.color = 'red';
+    }
 
 });
 
@@ -54,7 +66,13 @@ ssButton.addEventListener("click", function() {
     //  - The answer should be "Albany".
     //  - If the user enters the correct answer, use .innerHTML to display the word "You got it!" in the ".ss-message" div. 
     //  - If incorrect, display "Womp, womp. Try again."
-
+    if (ssInput === "albany") {
+        ssMessage.innerHTML = 'Correct!! move on';
+        ssMessage.style.color = 'green';
+    }else {
+        ssMessage.innerHTML = 'Wrong, Wrong Wrong Wrong. try again';
+        ssMessage.style.color = 'red';
+    }
 
 
 });
@@ -63,14 +81,20 @@ ssButton.addEventListener("click", function() {
 scienceButton.addEventListener("click", function() {
     // 5. Declare a variable that stores the value of the user input in the science section.
     //  - Look at previous lines of code to help you out.
-
+    let scienceInput = document.querySelector('.science').value;
 
     // 6. Write an if-else conditional statement.
     //  - Check if the value of the input variable is correct.
     //  - The answer should be "solid".
     //  - If the user enters the correct answer, use .innerHTML to display the word "Rockstar!" in the ".science-message" div. 
     //  - If incorrect, display "Sad. Try again."
-
+    if (scienceInput === "solid") {
+        scienceMessage.innerHTML = 'Correct!! move on';
+        scienceMessage.style.color = 'green';
+    }else {
+        scienceMessage.innerHTML = 'Wrong, Wrong Wrong Wrong. try again';
+        scienceMessage.style.color = 'red';
+    }
 
 
 });
